@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Utils</title>
+</head>
+<body>
+<center>
+    <h1>
+        Welcome to the text analyzer .
+    </h1>
+    <br>
+    <h2>
+        Enter your text :
+    </h2>
+</center>
+
+<form action="/analyze" method="get">
+    <textarea name="text" style="margin: 0px; width: 1511px; height: 157px;">
+    </textarea>
+
+    <input type="checkbox" name="removepun"> Remove punctuation
+    <br>
+    <input type="checkbox" name="fullcaps"> Capatalize the words
+    <br>
+    <input type="checkbox" name="spaceremover"> Extra space remove
+    <br>
+    <input type="checkbox" name="newlineremove"> New Line remover
+    <br>
+    <input type="checkbox" name="countchar"> count the charecter
+    <br>
+    <button type="submit">Analyze Text</button>
+</form>
+</body>
+</html>
