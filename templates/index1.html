@@ -47,7 +47,8 @@
     <center>
     <h3>Enter your text</h3>
     </center>
-<form action="/analyze" method="get" >
+<form action="/analyze" method="post" >{% csrf_token %}
+
     <div class="mb-3" style="padding-left:50px; padding-right:50px;" >
       <label for="exampleFormControlTextarea1" class="form-label" ></label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="text"></textarea>
