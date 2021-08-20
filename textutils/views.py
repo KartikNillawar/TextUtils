@@ -2,18 +2,18 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return render(request,'index.html')
+    return render(request,'index1.html')
 #   render(request,filename)
 
 def analyze(request):
     text1 = request.GET.get('text', 'default')
-
     removepunc = request.GET.get('removepun','off')
     fullcap = request.GET.get('fullcaps','off')
     spaceremover = request.GET.get('spaceremover','off')
     newlineremove = request.GET.get('newlineremove','off')
     countchar = request.GET.get('countchar','off')
 
+    print(removepunc)
     if removepunc == "on":
         punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
         analyzed = ""
@@ -21,8 +21,6 @@ def analyze(request):
             if char not in punctuations:
                 analyzed = analyzed + char
         params = {'purpose': 'Removed Punctuations', 'analyzed_text': analyzed}
-        # analyze the text
-        # return HttpResponse("remove punc")
         return render(request, 'analyze.html', params)
     elif fullcap=="on":
         analyzed =""
@@ -53,14 +51,3 @@ def analyze(request):
         return render(request, 'analyze.html', params)
     else:
         return HttpResponse("Error")
-#def capfirst(request):
-#    return HttpResponse("capitalize first")
-
-#def newlineremove(request):
-#    return HttpResponse("new line remove")
-
-#def spaceremover(request):
-#    return HttpResponse("space remover <a href='/'>back</a>")
-
-#def charcount(request):
-#    return HttpResponse("charecter count")
