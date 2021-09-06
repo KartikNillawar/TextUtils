@@ -2,10 +2,10 @@
 
 TextUtils is a simple Django project application that offers the following functionalities on a given text:
 
-1] Removal of punctuations
-2] Capitalization of text
-3] Removal of new lines
-4] Counting the no. of characters
+1] Removal of punctuations \n
+2] Capitalization of text \n
+3] Removal of new lines \n
+4] Counting the no. of characters \n
 
 # Install Django:
 pip3 install django
